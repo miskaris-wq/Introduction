@@ -115,17 +115,11 @@ public class FirstSteps {
         }
         for (int i = 0; i < array.length; i++) {
             int num = array[i];
-
-            if (num > -1291 && num < 1291) { /* если возвести число, больше либо равное 1291 по модулю
-                 то это превысит допустимые для int значения */
-                array[i] = num * num * num;
-            } else {
-                throw new ArithmeticException(
-                        String.format("Число %d слишком велико для безопасного возведения в куб.", num)
-                );
+            array[i] = num * num * num;
+                }
             }
-        }
-    }
+
+
 
     public boolean find(int[]array, int value){
         if (array == null) {
